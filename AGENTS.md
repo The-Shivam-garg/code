@@ -1,0 +1,16 @@
+- Portfolio content lives in typed arrays in `src/data/trail.ts` (filler flagged `sample: true`); components in `src/components/trail/` only render it, so content updates do not alter presentation code.
+- Product Thinking content lives in a separate typed product data module and uses one dynamic detail route and shared illustrative-cover component; this keeps every product on the same complete template without coupling it to journey state.
+- Global typography, spacing, and semantic colors live in `src/styles.css`, so the portfolio can be rethemed without changing section markup.
+- The journey keeps its shared `Stop` shell and derives navigation and stop totals from the active typed stops array, so section removals cannot leave dangling links; the default experience uses the scrapbook community-zine system.
+- Keep the SVG opening in its own browser-safe component with a time-based damped spring, optional session-scoped skipping, and reduced-motion bypass, so it never delays repeat visits or traps navigation.
+- Keep the reference footer copy and destinations in a typed data module, render text and links as HTML, and use only the extracted artwork as media; this preserves accessibility and editable content.
+- Keep testimonial collage content in its own typed data module and extract only individual photos from the supplied reference; HTML quotes and controls remain accessible, and video stills never simulate unavailable recordings.
+- Keep the Hooman collage in a reusable native-sticky section with typed photo/caption layouts and a static reduced-motion fallback; extract only reference photos so all typography stays accessible and editable.
+- Keep the Hooman aspirations board separate from the scroll collage with typed copy, accessible conversation links, and photo-only assets; this preserves both reference sections without flattening the UI into an image.
+- Keep board collection photos in typed data, derive counts from real images, and use one accessible gallery/lightbox component with hover, click, and focus entry points so all input modes share the same content.
+- Keep Resources in a typed library module and separate reference-layout component; previews and pack exports must disclose missing original documents rather than simulate downloads.
+- Keep Communities shelf in a separate showcase with typed records derived from existing community facts; logo selection updates the accessible detail panel, and reference photos remain unattributed rather than invented evidence.
+- Keep the reduced homepage composed of active stops only, with proof links pointing to retained sections; responsive community photos use natural dimensions to avoid screenshot-like clipping.
+- Routing DOM tests use the real route tree without its document shell and provide browser-observer stubs, because JSDOM already owns the document and lacks visibility observers.
+- Visitor stories use a public correspondence route, shared validation and an insert-only private Cloud table/bucket; no visitor read policies or automatic publishing, so messages and recordings remain private.
+- Keep section-dwell testimonial prompts in a standalone browser-safe component using existing typed voices, visible-page timers and session-scoped dismissal, so prompts never interrupt navigation or invent endorsements.
